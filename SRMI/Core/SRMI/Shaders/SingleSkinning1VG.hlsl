@@ -25,11 +25,6 @@ void main(uint3 vThreadID: SV_DispatchThreadID) {
     if (vThreadID.x >= (uint)VERTEX_COUNT) {
         return;
     }
-    // POSE_ID Encodes the slot ID for the pose buffer and which shader it corresponds to
-    // 1 -> Single Pose No SK
-    // 2 -> Single Pose Yes SK
-    // 10 - 19 -> Multipose No SK
-    // 20 - 29 -> Multipose Yes SK
     // slot 0 cb04.x 
     // slot 1 cb04.y
     // slot 2 cb04.z
@@ -42,33 +37,13 @@ void main(uint3 vThreadID: SV_DispatchThreadID) {
     uint offset = 0;
     uint slot = 0;
 
-    // if (POSE_ID < 1 || POSE_ID > 29) {
-    //     // invalid- we leave
-    //     return;
-    // }
-
-    if (POSE_ID >= 10) {
-        // slot = (uint)POSE_ID % 10;
-        // offset = cb0[slot < 4 ? 4 : 5][slot % 4];
-        slot = POSE_ID - 30;
-        if (slot == 0) {
-            offset = cb0[4].x;
-        } else if (slot == 1) {
-            offset = cb0[4].y;
-        } else if (slot == 2) {
-            offset = cb0[4].z;
-        } else if (slot == 3) {
-            offset = cb0[4].w;
-        } else if (slot == 4) {
-            offset = cb0[5].x;
-        } else if (slot == 5) {
-            offset = cb0[5].y;
-        } else if (slot == 6) {
-            offset = cb0[5].z;
-        } else if (slot == 7) {
-            offset = cb0[5].w;
-        }
+    if (POSE_ID < 30 || POSE_ID > 39) {
+        // invalid- we leave
+        return;
     }
+
+    slot = (uint)POSE_ID % 10;
+    offset = cb0[slot < 4 ? 4 : 5][slot % 4];
 
     pos_struct pos = pos_buf[vThreadID.x];
     blend_struct blend = blend_buf[vThreadID.x];
