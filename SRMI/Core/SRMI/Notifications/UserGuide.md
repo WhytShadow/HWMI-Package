@@ -13,6 +13,7 @@ Mod User Hotkeys:
 [F12]: Toggle this User Guide
 [F6]: Toggle SRMI
 [F10]: Reload SRMI and Save mods settings
+[Ctrl]+[Alt]+[F10]: Reset Mod Settings and Reload
 
 Mod Developer Hotkeys:
 [F9]: Disable SRMI while held
@@ -20,7 +21,10 @@ Mod Developer Hotkeys:
 [Ctrl]+[F12]: Toggle Hunting Mode Guide
 Numpad [0]: Toggle Hunting Mode (green text)
 
-You can find more mods at:
+XXMI Launcher:
+Explore handy features and tweaks in Settings for best results!
+
+Check out the latest creations and community support at:
 https://gamebanana.com/games/18366
 https://discord.com/invite/agmg
 
