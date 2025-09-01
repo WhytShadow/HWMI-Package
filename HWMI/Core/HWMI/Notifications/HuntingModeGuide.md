@@ -1,6 +1,6 @@
 Debugging:
 To enable ini errors output, see XXMI Launcher > Settings > HWMI > Mute Warnings
-To enable built-in debugger, remove ';' before 'include = Core/Debugger/Debugger.ini' in d3dx.ini
+To enable built-in debugger, remove ';' before 'include = Core/Debugger/Debugger.ini' in d3dx.ini 
 [SHIFT]+[F12]: Toggle Debugger (refer to Core/Debugger/Debugger.ini)
 
 Hunting Mode Hotkeys (NumPad):

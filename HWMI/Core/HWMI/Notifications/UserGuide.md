@@ -1,12 +1,10 @@
 Horizon Walker Model Importer
 
 Mod Installation:
-
 1. Extract mod's archive
 2. Put extracted folder into the Mods folder
 
 Mod Hot Load (without game restart):
-
 1. Install mod
 2. Hide modded character from screen (switch to another)
 3. Press F10 to reload HWMI

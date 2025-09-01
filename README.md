@@ -1,4 +1,4 @@
-<h1 align="center">Honkai: Star Rail Model Importer XXMI Package</h1>
+<h1 align="center">Horizon Walker Model Importer XXMI Package</h1>
 
 <h4 align="center">IN-DEV BUILD</h4>
 
